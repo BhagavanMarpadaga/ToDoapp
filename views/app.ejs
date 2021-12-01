@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>
+            <%=title%>
+        </title>
+        <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/CSS/app.css">
+    </head>
+    <body>
+        <div class="app">
+            TODO APP
+        </div>
+        <div class="todo-list-form">
+            <form action="/app/new-task" method="POST" class="creat-new" >
+                <div class=" description">
+                    <div class="input-data">
+                        <input type="text" name="description" id="description" autocomplete="off" required>
+                        <label for="description" class="text-label">DESCRIPTION</label>
+                    </div>
+                </div>
+                <div class="date-cat ">
+                    <div class="col category">
+                        <label for="category" class="text-label">CATEGORY</label>
+                        <select name="category" id="category" class="select">
+                            <option disabled selected>Select Category</option>
+                            <option  value="personal">Personal</option>
+                            <option value="work">Work</option>
+                            <option value="school">School</option>
+                            <option value="catering">Catering</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col due-date">
+                        <label for="duedate" class="text-label" >DUE DATE</label>
+                        <input type="date" name="duedate">
+
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="add"><i class="fas fa-plus"></i>ADD TASK</button>
+                    <button type="submit" class="delete" formaction="/app/delete-tasks" onclick="required()" ><i class="far fa-trash-alt"></i>DELETE TASKS</button>
+                </div>
+                <div class="list">
+                        <%for(let i of Todo_List){%>
+                                <div class="single-item">
+                                    <div>
+                                        <input type="checkbox" id="check-box" name="check" value="<%=i._id%>">
+                                    </div>
+                                    <div class="des-due">
+                                        <div class="item-desc">
+                                            <%=i.description%>
+                                        </div>
+                                        <div>
+                                            <i class="far fa-calendar-alt"></i><%=i.duedate%>
+                                        </div>
+                                    </div>
+                                    <div class="item-category" id="item-category">
+                                        <%=i.category%>
+                                    </div>
+                                </div>                
+                        <%}%>
+                </div>
+            </form>
+        </div>
+
+        <script type="text/javascript" src="/JS/home.js"></script>
+    </body>
+</html>
