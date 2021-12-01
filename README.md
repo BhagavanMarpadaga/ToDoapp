@@ -1,2 +1,3 @@
 # ToDoapp 
-Bilt on MVC architecture using NodeJS, MondoDB used as data source to store user data
+End to end Node JS Appication Built using expressJS as web framework
+MondoDB used as data source to store user data
