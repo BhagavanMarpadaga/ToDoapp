@@ -1,0 +1,278 @@
+body
+{
+    text-align: center;
+    width:50vw;
+    box-shadow: 3px 3px 10px  grey;
+    margin: auto;
+    font-family: system-ui;
+    background-color: #d8dfe9;
+}
+.app
+{
+    margin-top: 0.5rem;
+    font-family: system-ui;
+    font-weight: 700;
+    background-color: rgb(5 144 225);
+    height: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+.todo-list-form
+{
+    margin-top: 0;
+    background-color: rgb(226, 219, 219);
+    /* height: 100%; */
+   
+}
+/*====================description===============*/
+.description
+{
+    width: 100%;
+    height: 4rem;
+    background:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 219, 219);
+}
+.description .input-data
+{
+    height: 2rem;
+    width: 98%;
+    position: relative;
+    background-color: rgb(226, 219, 219);
+
+}
+.description .input-data input
+{
+    
+    width: 100%;
+    height: 100%;
+    border: none !important;
+    border-bottom:2px solid silver !important;
+    font-family: system-ui;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    background-color: #eeeeee;
+    border-radius: 5px;
+}
+.description .input-data input:focus
+{
+    outline: none;
+    border-bottom:2px solid rgb(122, 119, 119) !important;
+    background: none; 
+
+}
+
+.description .input-data label
+{
+    position: absolute;
+    left: 0;
+    bottom: 0.3rem;
+    font-family: system-ui;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.description .input-data input:focus ~label,
+.input-data input:valid ~label
+{
+    transform: translateY(-20px);
+    font-size: 15px;
+    color: gray;
+}
+
+/*===============----------SELECT&DATE=================*/
+.date-cat
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 5rem;
+}
+.select
+{
+    padding: 8px 12px;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    font-family: system-ui;
+    font-size: 14px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+select:focus
+{
+    outline: none;
+    border: 2px solid rgb(168, 158, 158);
+    
+}
+
+.text-label
+{
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+.category
+{
+    width: 48%;
+    /* border: 1px solid black; */
+    font-family: system-ui;
+    font-weight: 500;
+}
+.due-date
+{
+    width: 48%;
+    /* border: 1px solid black; */
+    font-family: system-ui;
+    font-weight: 500;
+}
+input[type="date"]
+{
+    background-color: #eeeeee;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    font-family: system-ui;
+    font-size: 14px;
+    box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.col
+{
+    display: flex;
+    flex-direction: column;
+}
+/*-==================Buttons==============-====================*/
+.buttons
+{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    
+}
+.buttons button{
+    width :28%;
+    min-height: 50px;
+    margin: 0.25rem;
+    font-family: system-ui;
+    font-size: 1.2rem;
+}
+.buttons .add
+{
+    background-color: rgb(77, 74, 74);
+    color: white;
+    font-family: system-ui;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+}
+.buttons .delete
+{
+    background-color: tomato;
+    color: white;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 8px;
+    
+}
+.fa-plus,.fa-trash-alt
+{
+    font-size:1.5rem;
+    margin-right:0.5rem;
+}
+/*====================-----List====================*/
+
+.list
+{
+    margin-bottom: 1rem;
+}
+.single-item:nth-child(even)
+{
+    background-color: rgb(178, 163, 221);
+}
+.single-item:nth-child(odd)
+{
+    background-color: rgb(98 223 4 / 37%);
+}
+.single-item
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: space-between ;
+    padding: 10px;
+  
+}
+.item-check-desc
+{
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#check-box
+{
+    border: 2px solid black;
+    margin: 20px;
+}
+.des-due
+{
+   
+    text-align: left;
+    margin-top: 0.25rem;
+    color: #262323;
+    font-family: system-ui;
+    font-weight: 400;
+    font-size: 1.2rem;
+    overflow-wrap: break-word;
+    max-width: 30rem;
+}
+ .item-category
+{
+  position: relative;
+  margin-right: 1rem;
+  margin-left: 2rem;
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.category-val-Work
+{
+    background-color: rgba(54, 77, 153, 0.884);
+}
+.category-val-Personal
+{
+    background-color: rgb(229 91 92 / 0.88)
+}
+.category-val-School
+{
+    background-color: rgb(175 158 8 / 88%);
+}
+.category-val-Catering
+{
+    background-color: rgb(112 19 71 / 88%);
+}
+.category-val-Other
+{
+    background-color: rgb(6 118 133 / 88%);
+}
+.fa-calendar-alt
+{
+    margin-right: 0.5rem;
+}
